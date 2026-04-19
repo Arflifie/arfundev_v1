@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,37 +15,65 @@
     />
   </head>
   <body class="p-4 max-w-7xl mx-auto">
-    <header class="flex justify-between items-center position: sticky top-4">
-      <!-- <img src="https://icons8.com/icon/113989/source-code" alt="myLogo" /> -->
-      <i class="fa-brands fa-dev text-4xl"></i>
-      <nav>
-        <ul
-          class="flex flex-row space-x-10 justify-center text-xl font-semibold"
-        >
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+    <header class="sticky top-4">
+      <div class="flex justify-between items-center">
+        <i class="fa-brands fa-dev text-4xl"></i>
+        
+        <!-- desktop menu -->
+        <nav id="home">
+          <div class="hidden md:block w-full">
+            <ul
+              class="flex flex-row space-x-10 justify-center text-xl font-semibold"
+            >
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#skills">Skill</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <h1 class="hidden md:block text-xl font-semibold">Hallo Guest</h1>
+
+        <!-- button mobile -->
+        <button class="cursor-pointer md:hidden" onclick="hamburger()">
+          <i class="fa-solid fa-bars-staggered text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- mobile menu -->
+      <nav class="mt-5 hidden" id="MobileMenu">
+        <ul class="w-full flex flex-col space-y-2 text-lg font-semibold">
+          <li class="hover:bg-gray-300 p-2 rounded-2xl cursor-pointer">
+            <a href="#">Home</a>
+          </li>
+          <li class="hover:bg-gray-300 p-2 rounded-2xl cursor-pointer">
+            <a href="#">About</a>
+          </li>
+          <li class="hover:bg-gray-300 p-2 rounded-2xl cursor-pointer">
+            <a href="#">Contact</a>
+          </li>
         </ul>
       </nav>
-      <h1 class="text-xl font-semibold">Hallo Guest</h1>
+      
     </header>
     <main>
       <!-- SECTION 1 -->
-      <section class="h-screen">
-        <h1 class="text-5xl text-blue-600 font-bold text-center mt-10 pt-45">
+      <section class="h-screen" >
+        <h1 class="text-4xl text-blue-600 font-bold text-center mt-10 pt-45">
           Welcome to ArfunDev
         </h1>
-        <article>
-          <p class="text-xl text-gray-600 text-center mt-10">
+        
+          <p class="text-lg text-gray-600 text-center mt-10">
             We are a team of passionate developers who love to create amazing
             projects. We are always looking for new opportunities to collaborate
             and create something great together. If you are interested in
             working with us, please feel free to contact us.
           </p>
-        </article>
+        
         <div>
           <ul
-            class="flex flex-row space-x-9 text-4xl font-semibold pt-10 justify-center"
+            class="flex flex-row space-x-9 text-3xl font-semibold pt-10 justify-center"
           >
             <li>
               <a href="#Linkedin"><i class="fa-brands fa-linkedin"></i></a>
@@ -64,7 +92,7 @@
       </section>
 
       <!-- SECTION 2 -->
-      <section class="h-[80vh]">
+      <section class="h-[80vh]" id="skills">
         <h1
           class="text-center text-blue-600 text-4xl font-semibold font-[Montserrat]"
         >
@@ -90,6 +118,12 @@
         src="https://kit.fontawesome.com/32571c53f3.js"
         crossorigin="anonymous"
       ></script>
+      <script>
+        function hamburger() {
+          const MobileMenu = document.getElementById("MobileMenu");
+          MobileMenu.classList.toggle("hidden");
+        }
+      </script>
     </main>
   </body>
 </html>
