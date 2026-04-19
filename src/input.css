@@ -1,2 +1,9 @@
 @import "tailwindcss";
-@source "../";
+@theme{
+    --font-sans : "montserrat", sans-serif;
+}
+@layer base{
+    html, body{
+        font-family : "montserrat", sans-serif !important;
+    } 
+}
