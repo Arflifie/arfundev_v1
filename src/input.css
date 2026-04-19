@@ -1,9 +1,9 @@
 @import "tailwindcss";
-@theme{
-    --font-sans : "montserrat", sans-serif;
+@theme {
+    --font-sans : "cascadia mono", sans-serif;
 }
 @layer base{
     html, body{
-        font-family : "montserrat", sans-serif !important;
+        font-family : "cascadia mono", sans-serif !important;
     } 
 }

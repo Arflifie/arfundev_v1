@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -18,22 +18,32 @@
     <header class="sticky top-4">
       <div class="flex justify-between items-center">
         <i class="fa-brands fa-dev text-4xl"></i>
-        
+
         <!-- desktop menu -->
         <nav id="home">
           <div class="hidden md:block w-full">
             <ul
-              class="flex flex-row space-x-10 justify-center text-xl font-semibold"
+              class="flex flex-row space-x-10 justify-center text-xl text-black font-semibold"
             >
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#skills">Skill</a></li>
-              <li><a href="#">Contact</a></li>
+              <li class="hover:bg-gray-300 p-2 rounded-xl">
+                <a href="#">Home</a>
+              </li>
+              <li class="hover:bg-gray-300 p-2 rounded-xl">
+                <a href="#">About</a>
+              </li>
+              <li class="hover:bg-gray-300 p-2 rounded-xl">
+                <a href="#skills">Skill</a>
+              </li>
+              <li class="hover:bg-gray-300 p-2 rounded-xl">
+                <a href="#">Contact</a>
+              </li>
             </ul>
           </div>
         </nav>
 
-        <h1 class="hidden md:block text-xl font-semibold">Hallo Guest</h1>
+        <h1 class="hidden md:block text-xl font-semibold">
+          Guest<span><i class="fa-solid fa-user ml-4"></i></span>
+        </h1>
 
         <!-- button mobile -->
         <button class="cursor-pointer md:hidden" onclick="hamburger()">
@@ -50,7 +60,7 @@
           <li class="hover:bg-gray-300 p-2 rounded-2xl cursor-pointer">
             <a href="#">About</a>
           </li>
-           <li class="hover:bg-gray-300 p-2 rounded-2xl cursor-pointer">
+          <li class="hover:bg-gray-300 p-2 rounded-2xl cursor-pointer">
             <a href="#skills">Skill</a>
           </li>
           <li class="hover:bg-gray-300 p-2 rounded-2xl cursor-pointer">
@@ -58,25 +68,26 @@
           </li>
         </ul>
       </nav>
-      
     </header>
     <main>
       <!-- SECTION 1 -->
-      <section class="h-screen" >
-        <h1 class="text-3xl text-blue-600 font-bold text-center mt-10 pt-45">
+      <section class="h-screen">
+        <h1
+          class="text-3xl md:text-5xl text-blue-600 font-bold text-center mt-10 pt-40"
+          id="typeIT"
+        >
           Welcome to ArfunDev
         </h1>
-        
-          <p class="text-lg text-gray-600 text-center mt-10">
-            We are a team of passionate developers who love to create amazing
-            projects. We are always looking for new opportunities to collaborate
-            and create something great together. If you are interested in
-            working with us, please feel free to contact us.
-          </p>
-        
+
+        <p class="text-lg md:text-xl text-gray-600 text-center mt-10">
+          I am an Information Systems student passionate about combining
+          technology implementation with effective management. I have expertise
+          in UI/UX Design, Video Editing, and Web/Mobile Programming.
+        </p>
+
         <div>
           <ul
-            class="flex flex-row space-x-9 text-3xl font-semibold pt-10 justify-center"
+            class="flex flex-row space-x-9 text-3xl md:text-4xl font-semibold pt-10 justify-center"
           >
             <li>
               <a href="#Linkedin"><i class="fa-brands fa-linkedin"></i></a>
@@ -96,24 +107,77 @@
 
       <!-- SECTION 2 -->
       <section class="h-[80vh]" id="skills">
-        <h1
-          class="text-center text-blue-600 text-4xl font-semibold font-[Montserrat]"
-        >
+        <h1 class="text-center text-blue-600 text-3xl md:text-4xl font-bold">
           My Skills
         </h1>
 
         <div class="mt-20 space-y-10">
-          <ul class="flex flex-row space-x-20 justify-center">
-            <li><a href="#"></a>HTML</li>
-            <li><a href="#"></a>Tailwind CSS</li>
-            <li><a href=""></a>JavaScript</li>
-            <li><a href="#"></a>Laravel</li>
-            <li><a href="#"></a>React</li>
+          <ul class="flex flex-row space-x-4 justify-center text-lg">
+            <li>
+              <div class="p-2 flex flex-col items-center space-y-2">
+                <img src="../src/img/html5.svg" alt="HTML" width="25" />
+                <span> HTML </span>
+              </div>
+            </li>
+            <li>
+              <div class="p-2 flex flex-col items-center space-y-2">
+                <img
+                  src="../src/img/tailwindcss.svg"
+                  alt="Tailwind CSS"
+                  width="25"
+                  class="text-black"
+                />
+                <span class="text-center"> Tailwind CSS </span>
+              </div>
+            </li>
+            <li>
+              <div class="p-2 flex flex-col items-center space-y-2">
+                <img src="../src/img/js.svg" alt="JavaScript" width="25" />
+                <span> JavaScript </span>
+              </div>
+            </li>
+            <li>
+              <div class="p-2 flex flex-col items-center space-y-2">
+                <img src="../src/img/laravel.svg" alt="Laravel" width="25" />
+                <span> Laravel </span>
+              </div>
+            </li>
+            <li>
+              <div class="p-2 flex flex-col items-center space-y-2">
+                <img src="../src/img/react.svg" alt="React" width="25" />
+                <span> React </span>
+              </div>
+            </li>
           </ul>
-          <ul class="flex flex-row space-x-20 justify-center">
-            <li><a href="#"></a>Node.Js</li>
-            <li><a href="#"></a>Supabase</li>
-            <li><a href="#"></a>Git</li>
+          <ul class="flex flex-row space-x-9 justify-center">
+            <li>
+              <div class="p-2 flex flex-col items-center space-y-2">
+                <img src="../src/img/nodejs.svg" alt="nodeJs" width="25" />
+                <span> Node Js </span>
+              </div>
+            </li>
+            <li>
+              <div class="p-2 flex flex-col items-center space-y-2">
+                <img src="../src/img/supabase.svg" alt="nodeJs" width="25" />
+                <span>Supabase</span>
+              </div>
+            </li>
+            <li>
+              <div class="p-2 flex flex-col items-center space-y-2">
+                <img src="../src/img/git.svg" alt="Git" width="25" />
+                <span> git</span>
+              </div>
+            </li>
+            <li>
+              <div class="p-2 flex flex-col items-center space-y-2">
+                <img
+                  src="../src/img/premierepro.svg"
+                  alt="Premiere Pro"
+                  width="25"
+                />
+                <span>Premiere Pro</span>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
@@ -121,11 +185,30 @@
         src="https://kit.fontawesome.com/32571c53f3.js"
         crossorigin="anonymous"
       ></script>
+
+      <script src="/path/to/typeit/source"></script>
+      <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+
       <script>
         function hamburger() {
           const MobileMenu = document.getElementById("MobileMenu");
           MobileMenu.classList.toggle("hidden");
         }
+
+        // TypeIt
+        document
+          .addEventListener("DOMContentLoaded", function () {
+            new TypeIt("#typeIT", {
+              speed: 140,
+              startDelay: 500,
+              strings: [""],
+            })
+              .pause(200)
+              .delete(19, { speed: 150, startDelay: 500 })
+              .type("My Name Arfun Ali Yafie", { delay: 150, startDelay: 500 })
+              .go();
+          })
+          
       </script>
     </main>
   </body>
