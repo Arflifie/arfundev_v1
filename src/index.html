@@ -73,17 +73,19 @@
       <!-- SECTION 1 -->
       <section class="h-screen">
         <h1
-          class="text-3xl md:text-5xl text-blue-600 font-bold text-center mt-10 pt-40"
+          class="text-3xl md:text-5xl text-blue-600 font-bold text-center mt-10 pt-20 md:pt-40"
           id="typeIT"
         >
           Welcome to ArfunDev
         </h1>
-
-        <p class="text-lg md:text-xl text-gray-600 text-center mt-10">
-          I am an Information Systems student passionate about combining
-          technology implementation with effective management. I have expertise
-          in UI/UX Design, Video Editing, and Web/Mobile Programming.
-        </p>
+        <article class="w-full p-10">
+          <p class="text-lg md:text-xl text-gray-600 text-center mt-8">
+            I am an Information Systems student passionate about combining
+            technology implementation with effective management. I have
+            expertise in UI/UX Design, Video Editing, and Web/Mobile
+            Programming.
+          </p>
+        </article>
 
         <div>
           <ul
@@ -111,18 +113,20 @@
           My Skills
         </h1>
 
-        <div class="mt-20 space-y-10">
-          <ul class="flex flex-row space-x-4 justify-center text-lg">
+        <div class="mt-20">
+          <ul
+            class="grid grid-cols-3 gap-6 justify-items-center text-md sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5"
+          >
             <li>
               <div class="p-2 flex flex-col items-center space-y-2">
-                <img src="../src/img/html5.svg" alt="HTML" width="25" />
+                <img src="./img/html5.svg" alt="HTML" width="25" />
                 <span> HTML </span>
               </div>
             </li>
             <li>
               <div class="p-2 flex flex-col items-center space-y-2">
                 <img
-                  src="../src/img/tailwindcss.svg"
+                  src="./img/tailwindcss.svg"
                   alt="Tailwind CSS"
                   width="25"
                   class="text-black"
@@ -132,50 +136,48 @@
             </li>
             <li>
               <div class="p-2 flex flex-col items-center space-y-2">
-                <img src="../src/img/js.svg" alt="JavaScript" width="25" />
+                <img src="./img/js.svg" alt="JavaScript" width="25" />
                 <span> JavaScript </span>
               </div>
             </li>
             <li>
               <div class="p-2 flex flex-col items-center space-y-2">
-                <img src="../src/img/laravel.svg" alt="Laravel" width="25" />
+                <img src="./img/laravel.svg" alt="Laravel" width="25" />
                 <span> Laravel </span>
               </div>
             </li>
             <li>
               <div class="p-2 flex flex-col items-center space-y-2">
-                <img src="../src/img/react.svg" alt="React" width="25" />
+                <img src="./img/react.svg" alt="React" width="25" />
                 <span> React </span>
               </div>
             </li>
-          </ul>
-          <ul class="flex flex-row space-x-9 justify-center">
             <li>
               <div class="p-2 flex flex-col items-center space-y-2">
-                <img src="../src/img/nodejs.svg" alt="nodeJs" width="25" />
+                <img src="./img/nodejs.svg" alt="nodeJs" width="25" />
                 <span> Node Js </span>
               </div>
             </li>
             <li>
               <div class="p-2 flex flex-col items-center space-y-2">
-                <img src="../src/img/supabase.svg" alt="nodeJs" width="25" />
+                <img src="./img/supabase.svg" alt="nodeJs" width="25" />
                 <span>Supabase</span>
               </div>
             </li>
             <li>
               <div class="p-2 flex flex-col items-center space-y-2">
-                <img src="../src/img/git.svg" alt="Git" width="25" />
+                <img src="./img/git.svg" alt="Git" width="25" />
                 <span> git</span>
               </div>
             </li>
             <li>
               <div class="p-2 flex flex-col items-center space-y-2">
                 <img
-                  src="../src/img/premierepro.svg"
+                  src="./img/premierepro.svg"
                   alt="Premiere Pro"
                   width="25"
                 />
-                <span>Premiere Pro</span>
+                <span class="text-center">Premiere Pro</span>
               </div>
             </li>
           </ul>
@@ -196,19 +198,17 @@
         }
 
         // TypeIt
-        document
-          .addEventListener("DOMContentLoaded", function () {
-            new TypeIt("#typeIT", {
-              speed: 140,
-              startDelay: 500,
-              strings: [""],
-            })
-              .pause(200)
-              .delete(19, { speed: 150, startDelay: 500 })
-              .type("My Name Arfun Ali Yafie", { delay: 150, startDelay: 500 })
-              .go();
+        document.addEventListener("DOMContentLoaded", function () {
+          new TypeIt("#typeIT", {
+            speed: 140,
+            startDelay: 500,
+            strings: [""],
           })
-          
+            .pause(200)
+            .delete(19, { speed: 150, startDelay: 500 })
+            .type("My Name Arfun Ali Yafie", { delay: 150, startDelay: 500 })
+            .go();
+        });
       </script>
     </main>
   </body>
