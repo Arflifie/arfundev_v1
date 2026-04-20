@@ -14,28 +14,29 @@
       rel="stylesheet"
     />
   </head>
-  <body class="p-4 max-w-7xl mx-auto">
-    <header class="sticky top-4">
+  <body>
+    <header class="sticky top-4 p-4 max-w-7xl mx-auto z-100 relative">
       <div class="flex justify-between items-center">
         <i class="fa-brands fa-dev text-4xl"></i>
 
         <!-- desktop menu -->
-        <nav id="home">
+        <div></div>
+        <nav>
           <div class="hidden md:block w-full">
             <ul
               class="flex flex-row space-x-10 justify-center text-xl text-black font-semibold"
             >
               <li class="hover:bg-gray-300 p-2 rounded-xl">
-                <a href="#">Home</a>
+                <a href="#home">Home</a>
               </li>
               <li class="hover:bg-gray-300 p-2 rounded-xl">
-                <a href="#">About</a>
+                <a href="#about">About</a>
               </li>
               <li class="hover:bg-gray-300 p-2 rounded-xl">
                 <a href="#skills">Skill</a>
               </li>
               <li class="hover:bg-gray-300 p-2 rounded-xl">
-                <a href="#">Contact</a>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -52,7 +53,7 @@
       </div>
 
       <!-- mobile menu -->
-      <nav class="mt-5 hidden" id="MobileMenu">
+      <nav class="mt-5 hidden bg-gray-100 rounded-2xl" id="MobileMenu">
         <ul class="w-full flex flex-col space-y-2 text-lg font-semibold">
           <li class="hover:bg-gray-300 p-2 rounded-2xl cursor-pointer">
             <a href="#home">Home</a>
@@ -69,9 +70,9 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="p-4 max-w-7xl mx-auto">
       <!-- SECTION 1 -->
-      <section class="h-screen">
+      <section class="h-screen" id="home">
         <h1
           class="text-3xl md:text-5xl text-blue-600 font-bold text-center mt-10 pt-20 md:pt-40"
           id="typeIT"
@@ -92,17 +93,37 @@
             class="flex flex-row space-x-9 text-3xl md:text-4xl font-semibold pt-10 justify-center"
           >
             <li>
-              <a href="#Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+              <a
+                href="https://www.linkedin.com/in/arfunaliyafie/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
             </li>
             <li>
-              <a href="#Github"><i class="fa-brands fa-github"></i></a>
+              <a
+                href="https://github.com/Arflifie"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-github"></i
+              ></a>
             </li>
             <li>
-              <a href="#Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a
+                href="https://www.instagram.com/ar.yaf_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
             </li>
-            <li>
-              <a href="#Discord"><i class="fa-brands fa-discord"></i></a>
-            </li>
+            <!-- <li>
+              <a
+                href="https://discord.com/users/789456123"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-discord"></i
+              ></a>
+            </li> -->
           </ul>
         </div>
       </section>
@@ -112,17 +133,27 @@
         <h1 class="text-center text-blue-600 text-3xl md:text-4xl font-bold">
           About Me
         </h1>
-        <article class="max-w-5xl text-center mx-auto p-10">
-          <p class="text-lg md:text-xl text-gray-600 text-center mt-8">
-            I am a student of Information Systems at Universitas Bina Sarana
-            Informatika, with a strong passion for technology and a desire to
-            make a positive impact in the world. I have a diverse skill set that
-            includes UI/UX Design, Video Editing, and Web/Mobile Programming.
-            With my expertise in these areas, I am committed to creating
-            innovative solutions that enhance user experiences and drive
-            technological advancements.
+        <div class="grid grid-cols-1 md:grid-cols-2 mt-10 md:mt-20 items-center">
+          <div class="flex flex-col">
+            <span class="flex justify-center">
+              <img
+                src="./img/fotoSaya.jpg"
+                alt="My Photo"
+                class="aspect-square rounded-full w-40 h-full object-cover"
+              />
+            </span>
+            <h2 class="font-bold text-2xl text-center mt-5">Arfun Ali Yafie</h2>
+          </div>
+          <article class="max-w-5xl text-center mx-auto p-3 px-10">
+          <p class="text-lg md:text-xl text-gray-600 text-center md:text-left mt-4 about" >
+            I am an Information Systems student passionate about combining
+            technology implementation with effective management. I have
+            expertise in UI/UX Design, Video Editing, and Web/Mobile
+            Programming.
           </p>
         </article>
+        </div>
+        
       </section>
 
       <!-- SECTION 3 -->
@@ -293,6 +324,7 @@
         </div>
       </section>
 
+      <!-- SECTION 4 -->
       <section class="h-[80vh]" id="projects">
         <h1 class="text-center text-blue-600 text-3xl md:text-4xl font-bold">
           Projects
@@ -302,7 +334,7 @@
           <div
             class="grid grid-cols-2 md:grid-cols-3 justify-items-center mt-20 gap-5 md:gap-10"
           >
-          <!-- Project 1 -->
+            <!-- Project 1 -->
             <a
               href="https://siagart.vercel.app/"
               class="text-center space-y-3 shadow-2xl p-2 rounded-xl hover:scale-105 transition duration-300"
@@ -337,27 +369,46 @@
         </div>
       </section>
 
+      <!-- SECTION 5 -->
       <section class="h-[80vh]" id="skills">
         <h1 class="text-center text-blue-600 text-3xl md:text-4xl font-bold">
           Services
         </h1>
       </section>
+
+      <!-- SECTION 6 -->
       <section class="h-[80vh]" id="contact">
         <h1 class="text-center text-blue-600 text-3xl md:text-4xl font-bold">
           Contact Me
         </h1>
       </section>
-
-      <!-- fontawesome -->
-      <script
-        src="https://kit.fontawesome.com/32571c53f3.js"
-        crossorigin="anonymous"
-      ></script>
-      <!-- TypeIt -->
-      <script src="/path/to/typeit/source"></script>
-      <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
-
-      <script src="./app.js"></script>
     </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-700 p-10">
+      <div class="grid grid-cols-1">
+        <h1 class="text-left text-white text-2xl font-bold">ArfunDev</h1>
+        <span class="mt-8">
+          <h3 class="text-left text-white">Email: ar.yaf@google.com</h3>
+          <h3 class="text-left text-white">Phone: +62 851 6322 0401</h3>
+          <h3 class="text-left text-white">Address: Jambi, Indonesia</h3>
+        </span>
+      </div>
+
+      <p class="text-center text-white mt-10">
+        &copy; <span id="currentYear"></span> ArfunDev. All rights reserved.
+      </p>
+    </footer>
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/32571c53f3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- TypeIt -->
+    <script src="/path/to/typeit/source"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+
+    <script src="./app.js"></script>
   </body>
 </html>
