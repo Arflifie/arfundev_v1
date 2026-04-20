@@ -1,9 +1,35 @@
 @import "tailwindcss";
 @theme {
-    --font-sans : "cascadia mono", sans-serif;
+  --font-sans: "cascadia mono", sans-serif;
 }
-@layer base{
-    html, body{
-        font-family : "cascadia mono", sans-serif !important;
-    } 
+@layer base {
+  html,
+  body {
+    font-family: "cascadia mono", sans-serif !important;
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marquee-left {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee-right {
+    animation: marquee-right 8s linear infinite;
+}
+
+.marquee-left {
+    animation: marquee-left 8s linear infinite;
 }
