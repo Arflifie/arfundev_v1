@@ -33,3 +33,7 @@
 .marquee-left {
     animation: marquee-left 8s linear infinite;
 }
+
+.marquee-right:hover{
+    animation-play-state: paused;
+}
